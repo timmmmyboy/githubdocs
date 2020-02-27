@@ -9,5 +9,5 @@ published: true
 post_date: 2020-02-27 19:37:02
 ---
 <!-- wp:paragraph -->
-<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
+<p>Welcome to WordPress.</p>
 <!-- /wp:paragraph -->
