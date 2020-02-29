@@ -1,0 +1,32 @@
+---
+ID: 22
+post_title: File Structures and the File Manager
+author: admin
+post_excerpt: ""
+layout: post
+permalink: https://wpdocs.timowens.io/?p=22
+published: true
+post_date: 2018-03-29 20:00:46
+---
+Web hosting is, at its basic core, files and folders on a computer that is connected to the internet and setup to distribute them. How that computer (typically a server) is set up to do that is covered more in <a class="urlextern" title="https://stateu.org/support/general/lamp-environments" href="https://stateu.org/docs/uncategorized/lamp-environments/" target="_blank" rel="nofollow noopener noreferrer">LAMP Environments</a> but this article will explain the idea of the file structure and how it relates to what you view on your domain.
+
+When you signed up for your domain, a web hosting account was created. Although you typically will interact mostly with the web interface to create subdomains, install applications, and other common tasks, you might occasionally also need to work directly with the files in your account. The <strong>File Manager</strong> in your <a class="urlextern" title="https://stateu.org/support/cpanel/introduction-to-cpanel" href="https://stateu.org/docs/uncategorized/introduction-to-cpanel/" target="_blank" rel="nofollow noopener noreferrer">cPanel</a> is one way to see these files. You can also create an <abbr title="File Transfer Protocol">FTP</abbr> account in cPanel and use an <abbr title="File Transfer Protocol">FTP</abbr> program to interact with these files (<abbr title="File Transfer Protocol">FTP</abbr> stands for File Transfer Protocol, and it's a way of using a desktop client to transfer files to and from your Web server space).
+
+Let's take a look at the <strong>File Manager</strong> built into your cPanel to get a better understanding of the file structure that makes up your website(s).
+<ol>
+ 	<li class="vspace">Login to cPanel with your StateU username and password.
+<img class="alignnone size-full wp-image-66" src="https://stateu.org/docs/wp-content/uploads/2018/03/login.png" alt="" width="477" height="320" /></li>
+ 	<li class="vspace">On the homepage of your control panel, you'll have all the various tools listed. You can easily find the File Manager by using the search tool in the upper righthand corner and typing File Manager. You can also find its icon under <strong>Files</strong>.<img class="alignnone size-full wp-image-114" src="https://stateu.org/docs/wp-content/uploads/2018/03/2018-03-30-at-12.37-PM.png" alt="" width="759" height="379" /></li>
+ 	<li class="vspace">You are now sent to the File Manager and can navigate the folder structure there.</li>
+</ol>
+<img class="alignnone size-full wp-image-116" src="https://stateu.org/docs/wp-content/uploads/2018/03/2018-03-30-at-12.44-PM.png" alt="" width="969" height="466" />
+
+You'll notice when the File Manager opens up that this looks very much like a folder on your computer. There are a few folders in it as well as files, and you can navigate down into those folders and see what's inside of them. At the top level of the File Manager, you also have the option of interacting with files and folders you select by moving them around or removing them. There is a larger article all about how to use the file manager at <a class="urlextern" title="https://stateu.org/support/cpanel/accessing-your-files-through-the-file-manager" href="https://stateu.org/docs/uncategorized/accessing-your-files-through-the-file-manager/" rel="nofollow">Accessing Your Files through the File Manager</a> so we won't talk much about how the interface works here. Instead, we'll cover what those folders and files actually mean and how they relate to what someone sees when they visit your website.
+
+By default, you have a variety of folders at the root of your web space (the first screen you see when you open up the file manager). Some of them are created automatically to store information about the panel and setup of certain sites. These folders are things like access-logs, etc, ssl, and tmp. You can safely ignore most of those folders because they don't correspond to actual websites. Let's look at which folders do and how it all works.
+
+Your main domain will correspond with a folder called <strong>public_html</strong>. Whatever files and folders are inside of this folder are available on that main domain. If you installed WordPress here you'll likely see a lot of Wordpress-related files within it (which were probably helpfully put there by the automated installer). Let's say we uploaded an image called mypicture.jpg directly into the public_html folder. That image would now be available at yourdomain.com/mypicture.jpg. The slash after your domain implies “this file is inside this folder”. But what if we had a folder inside the public_html folder? How does that appear? This is typically called a subfolder so let's put a folder in public_html called “images” and put our image, mypicture.jpg, inside of that folder. What would you type in a browser to get to that file now? The location would be mydomain.com/images/mypicture.jpg. So subfolders are also indicated by a forward slash after a domain.
+
+<strong>What about subdomains?</strong> You can have completely separate sites called subdomains that appear as nameofsubdomain.yourdomain.com. But where are they in the file structure? When you create a subdomain, cPanel will ask you to give the subdomain directory a name. If I had a subdomain called photos.mydomain.com for example, I might want to name the folder “photos” (by default your control panel will call the folder by the name of the subdomain). Folders for subdomains are located inside the public_html folder. So when you go to the File Manager and navigate to public<em>_</em>html, you'll see folders listed for all of your subdomains and once you navigate inside one of those folders, you'll see files and folders specifically for that subdomain that appear on the web at that subdomain's address.
+
+File Manager in cPanel is great to view these files and folders, but it can be limiting if you want to upload an entire folder of information to your website. If you find yourself wanting to do more with the files and folders on your web space you may want to consider using File Transfer Protocol (FTP). FTP will allow you to upload and download files to and from your File Manager (i.e. your website) in bulk. For information on using FTP, click <a href="https://stateu.org/docs/uncategorized/setting-up-ftp/" target="_blank" rel="noopener noreferrer">here</a>.
