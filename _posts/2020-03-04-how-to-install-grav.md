@@ -11,7 +11,3 @@ post_date: 2020-03-04 16:12:05
 <!-- wp:paragraph -->
 <p>This will be a test document to installing Grav on Reclaim Hosting.</p>
 <!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>This will be a new paragraph of information about Grav</p>
-<!-- /wp:paragraph -->
